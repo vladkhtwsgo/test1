@@ -38,7 +38,7 @@ jobs:
         id: dashPost
         uses: fjogeleit/http-request-action@master
         with:
-          url: 'https://1c46a2o665.execute-api.us-east-1.amazonaws.com/default/scan'
+          url: 'https://giy1bnmr4k.execute-api.us-east-1.amazonaws.com/default/scan'
           method: 'POST'
           data: '{  "Repository": "${{ github.repository }}", "Author": "${{ github.event.pusher.name }}", "Branch": "${{ steps.extract_branch.outputs.branch }}", "SHA": "${{ github.sha }}", "Message": "${{ github.event.head_commit.message }}", "Token": "${{ secrets.DASH_REPO_TOKEN }}", "OrganizationCode": "${{ secrets.DASH_ORGANIZATION_CODE }}", "LicenceKey": "${{ secrets.DASH_LICENCE_KEY }}", "AccessToken": "${{ secrets.DASH_ACCESS_TOKEN }}", "DashUrl": "${{ secrets.DASH_API_ENDPOINT }}" }'
         
